@@ -259,7 +259,14 @@ function unzip<T extends Binary>(binary: T, outputDir: string, fileName: string)
   }
 
   // rename
-  fs.renameSync(path.resolve(outputDir, binary.zipContentName()), mv);
+  // HACK to fix chromedriver updates > 114
+  // https://github.com/angular/webdriver-manager/issues/517#issuecomment-1673232896
+  // fs.renameSync(path.resolve(outputDir, binary.zipContentName()), mv);
+  if (fileName.indexOf('chromedriver_') != -1) {
+    fs.renameSync(path.resolve(outputDir, 'chromedriver-mac-arm64', binary.zipContentName()), mv)
+  } else {
+    fs.renameSync(path.resolve(outputDir, binary.zipContentName()), mv);
+  }
 
   // set permissions
   if (osType !== 'Windows_NT') {
