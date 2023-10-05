@@ -1,5 +1,6 @@
 import * as path from 'path';
 import * as rimraf from 'rimraf';
+
 import {ChromeDriver} from '../../lib/binaries/chrome_driver';
 
 describe('chrome driver', () => {

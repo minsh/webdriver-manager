@@ -5,15 +5,16 @@ describe('program', () => {
   let program: Program;
 
   beforeEach(
-      () => {program = new Program()
-                           .command('fooCmd', 'fooDescription')
-                           .addOption(new Option('fooString1', 'fooDescription', 'string', 'foo'))
-                           .addOption(new Option('fooString1', 'fooDescription', 'string', 'foo'))
-                           .addOption(new Option('fooBoolean1', 'fooDescription', 'boolean', false))
-                           .addOption(new Option('fooBoolean2', 'fooDescription', 'boolean', true))
-                           .addOption(new Option('fooNumber1', 'fooDescription', 'number', 1))
-                           .addOption(new Option('fooNumber2', 'fooDescription', 'number', 2))
-                           .addOption(new Option('fooNumber3', 'fooDescription', 'number', 3))});
+      () => {
+          program = new Program()
+                        .command('fooCmd', 'fooDescription')
+                        .addOption(new Option('fooString1', 'fooDescription', 'string', 'foo'))
+                        .addOption(new Option('fooString1', 'fooDescription', 'string', 'foo'))
+                        .addOption(new Option('fooBoolean1', 'fooDescription', 'boolean', false))
+                        .addOption(new Option('fooBoolean2', 'fooDescription', 'boolean', true))
+                        .addOption(new Option('fooNumber1', 'fooDescription', 'number', 1))
+                        .addOption(new Option('fooNumber2', 'fooDescription', 'number', 2))
+                        .addOption(new Option('fooNumber3', 'fooDescription', 'number', 3))});
 
   it('should get minimist options', () => {
     let json = JSON.parse(JSON.stringify(program.getMinimistOptions()));

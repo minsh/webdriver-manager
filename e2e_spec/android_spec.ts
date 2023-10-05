@@ -1,5 +1,6 @@
 import * as os from 'os';
 import * as webdriver from 'selenium-webdriver';
+
 import {AndroidSDK} from '../lib/binaries'
 
 let versions: {androidsdk: string, appium: string} = require('../config.json').webdriverVersions;

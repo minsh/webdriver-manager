@@ -1,5 +1,6 @@
 import * as path from 'path';
 import * as rimraf from 'rimraf';
+
 import {ChromeXml} from '../../lib/binaries/chrome_xml';
 
 describe('chrome xml reader', () => {

@@ -1,5 +1,6 @@
 import * as path from 'path';
 import * as rimraf from 'rimraf';
+
 import {GeckoDriver} from '../../lib/binaries/gecko_driver';
 
 describe('gecko driver', () => {

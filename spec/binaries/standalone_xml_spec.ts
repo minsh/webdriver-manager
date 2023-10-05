@@ -1,5 +1,6 @@
 import * as path from 'path';
 import * as rimraf from 'rimraf';
+
 import {StandaloneXml} from '../../lib/binaries/standalone_xml';
 
 describe('standalone xml reader', () => {

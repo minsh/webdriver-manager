@@ -1,4 +1,5 @@
 import * as minimist from 'minimist';
+
 import {Logger, Options, Program} from '../cli';
 import {Config} from '../config';
 

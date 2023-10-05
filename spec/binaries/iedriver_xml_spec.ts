@@ -1,5 +1,6 @@
 import * as path from 'path';
 import * as rimraf from 'rimraf';
+
 import {IEDriverXml} from '../../lib/binaries/iedriver_xml';
 
 describe('iedriver xml', () => {

@@ -1,4 +1,5 @@
 import * as fs from 'fs';
+
 import {GithubApiConfigSource, XmlConfigSource} from '../../lib/binaries/config_source';
 import {Config} from '../../lib/config';
 
